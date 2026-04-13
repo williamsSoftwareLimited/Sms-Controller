@@ -109,7 +109,6 @@ namespace SmsControl
 
                 string errorMsg = "Could not establish a connection to the PLC: " + ex.Message;
                 logDebug(errorMsg);
-                MessageBox.Show(errorMsg, "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -117,8 +116,7 @@ namespace SmsControl
         {
             if (plc == null)
             {
-                MessageBox.Show("Not connected to PLC. Please connect first.", 
-                    "Not Connected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                logDebug("Not connected to PLC. Please connect first.");
                 return;
             }
 
@@ -169,16 +167,10 @@ namespace SmsControl
                         string errorMsg = string.Format("Error processing number for Operator {0}: {1}", 
                             item + 1, ex.Message);
                         logDebug(errorMsg);
-                        MessageBox.Show(errorMsg, "Processing Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 
                 readNumbers();
-            }
-            else
-            {
-                MessageBox.Show("No changes detected.", "Information", 
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -188,7 +180,6 @@ namespace SmsControl
             if (plc == null)
             {
                 logDebug("Error: PLC not connected");
-                MessageBox.Show("PLC not connected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -219,7 +210,6 @@ namespace SmsControl
                 string errorMsg = string.Format("Failed to write to PLC at address {0}: {1}", 
                     startAddress, ex.Message);
                 logDebug(errorMsg);
-                MessageBox.Show(errorMsg, "Write Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -277,7 +267,6 @@ namespace SmsControl
             {
                 string errorMsg = "Failed to read from PLC: " + ex.Message;
                 logDebug(errorMsg);
-                MessageBox.Show(errorMsg, "Read Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -468,8 +457,7 @@ namespace SmsControl
         {
             if (plc == null)
             {
-                MessageBox.Show("Not connected to PLC", "Error", 
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                logDebug("Not connected to PLC");
                 return;
             }
 
@@ -495,7 +483,6 @@ namespace SmsControl
             {
                 string errorMsg = "Failed to initialize modem: " + ex.Message;
                 logDebug(errorMsg);
-                MessageBox.Show(errorMsg, "Init Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -503,8 +490,7 @@ namespace SmsControl
         {
             if (plc == null)
             {
-                MessageBox.Show("Not connected to PLC", "Error", 
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                logDebug("Not connected to PLC");
                 return;
             }
 
@@ -530,7 +516,6 @@ namespace SmsControl
             {
                 string errorMsg = "Failed to send test command: " + ex.Message;
                 logDebug(errorMsg);
-                MessageBox.Show(errorMsg, "Test Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
