@@ -37,6 +37,10 @@
             this.txbxNumber3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txbxNumber4 = new System.Windows.Forms.TextBox();
+            this.chbxNumber1 = new System.Windows.Forms.CheckBox();
+            this.chbxNumber2 = new System.Windows.Forms.CheckBox();
+            this.chbxNumber3 = new System.Windows.Forms.CheckBox();
+            this.chbxNumber4 = new System.Windows.Forms.CheckBox();
             this.btnConnect = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSend = new System.Windows.Forms.Button();
@@ -134,19 +138,63 @@
             this.txbxNumber4.Size = new System.Drawing.Size(277, 26);
             this.txbxNumber4.TabIndex = 6;
             // 
+            // chbxNumber1
+            // 
+            this.chbxNumber1.AutoSize = true;
+            this.chbxNumber1.Location = new System.Drawing.Point(397, 32);
+            this.chbxNumber1.Name = "chbxNumber1";
+            this.chbxNumber1.Size = new System.Drawing.Size(22, 21);
+            this.chbxNumber1.TabIndex = 8;
+            this.chbxNumber1.UseVisualStyleBackColor = true;
+            this.chbxNumber1.CheckedChanged += new System.EventHandler(this.NumberCheckbox_CheckedChanged);
+            // 
+            // chbxNumber2
+            // 
+            this.chbxNumber2.AutoSize = true;
+            this.chbxNumber2.Location = new System.Drawing.Point(397, 68);
+            this.chbxNumber2.Name = "chbxNumber2";
+            this.chbxNumber2.Size = new System.Drawing.Size(22, 21);
+            this.chbxNumber2.TabIndex = 9;
+            this.chbxNumber2.UseVisualStyleBackColor = true;
+            this.chbxNumber2.CheckedChanged += new System.EventHandler(this.NumberCheckbox_CheckedChanged);
+            // 
+            // chbxNumber3
+            // 
+            this.chbxNumber3.AutoSize = true;
+            this.chbxNumber3.Location = new System.Drawing.Point(397, 104);
+            this.chbxNumber3.Name = "chbxNumber3";
+            this.chbxNumber3.Size = new System.Drawing.Size(22, 21);
+            this.chbxNumber3.TabIndex = 10;
+            this.chbxNumber3.UseVisualStyleBackColor = true;
+            this.chbxNumber3.CheckedChanged += new System.EventHandler(this.NumberCheckbox_CheckedChanged);
+            // 
+            // chbxNumber4
+            // 
+            this.chbxNumber4.AutoSize = true;
+            this.chbxNumber4.Location = new System.Drawing.Point(397, 140);
+            this.chbxNumber4.Name = "chbxNumber4";
+            this.chbxNumber4.Size = new System.Drawing.Size(22, 21);
+            this.chbxNumber4.TabIndex = 11;
+            this.chbxNumber4.UseVisualStyleBackColor = true;
+            this.chbxNumber4.CheckedChanged += new System.EventHandler(this.NumberCheckbox_CheckedChanged);
+            // 
             // btnConnect
             // 
             this.btnConnect.Location = new System.Drawing.Point(49, 173);
             this.btnConnect.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(166, 34);
-            this.btnConnect.TabIndex = 12;
+            this.btnConnect.TabIndex = 13;
             this.btnConnect.Text = "Connect";
             this.btnConnect.UseVisualStyleBackColor = true;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chbxNumber4);
+            this.groupBox1.Controls.Add(this.chbxNumber3);
+            this.groupBox1.Controls.Add(this.chbxNumber2);
+            this.groupBox1.Controls.Add(this.chbxNumber1);
             this.groupBox1.Controls.Add(this.btnSend);
             this.groupBox1.Controls.Add(this.btnDisconnect);
             this.groupBox1.Controls.Add(this.btnConnect);
@@ -170,11 +218,11 @@
             // btnSend
             // 
             this.btnSend.Enabled = false;
-            this.btnSend.Location = new System.Drawing.Point(397, 29);
+            this.btnSend.Location = new System.Drawing.Point(425, 29);
             this.btnSend.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(111, 178);
-            this.btnSend.TabIndex = 14;
+            this.btnSend.Size = new System.Drawing.Size(83, 178);
+            this.btnSend.TabIndex = 15;
             this.btnSend.Text = "Send";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
@@ -186,7 +234,7 @@
             this.btnDisconnect.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDisconnect.Name = "btnDisconnect";
             this.btnDisconnect.Size = new System.Drawing.Size(166, 34);
-            this.btnDisconnect.TabIndex = 13;
+            this.btnDisconnect.TabIndex = 14;
             this.btnDisconnect.Text = "Disconnect";
             this.btnDisconnect.UseVisualStyleBackColor = true;
             this.btnDisconnect.Click += new System.EventHandler(this.btnDisconnect_Click);
@@ -355,6 +403,10 @@
         private System.Windows.Forms.TextBox txbxNumber3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txbxNumber4;
+        private System.Windows.Forms.CheckBox chbxNumber1;
+        private System.Windows.Forms.CheckBox chbxNumber2;
+        private System.Windows.Forms.CheckBox chbxNumber3;
+        private System.Windows.Forms.CheckBox chbxNumber4;
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txbxDebug;
@@ -374,4 +426,3 @@
         private System.Windows.Forms.Label lbModemInit;
     }
 }
-
