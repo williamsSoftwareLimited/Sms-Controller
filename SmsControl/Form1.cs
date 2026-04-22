@@ -523,5 +523,30 @@ namespace SmsControl
         {
             txbxDebug.Clear();
         }
+
+        private void NumberCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            if (checkBox == null)
+            {
+                return;
+            }
+
+            switch (checkBox.Name)
+            {
+                case "chbxNumber1":
+                    // TODO: Handle checkbox for txbxNumber1.
+                    break;
+                case "chbxNumber2":
+                    // TODO: Handle checkbox for txbxNumber2.
+                    break;
+                case "chbxNumber3":
+                    // TODO: Handle checkbox for txbxNumber3.
+                    break;
+                case "chbxNumber4":
+                    // TODO: Handle checkbox for txbxNumber4.
+                    break;
+            }
+        }
     }
 }
