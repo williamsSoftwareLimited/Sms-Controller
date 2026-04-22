@@ -526,8 +526,7 @@ namespace SmsControl
 
         private void NumberCheckbox_CheckedChanged(object sender, EventArgs e)
         {
-            CheckBox checkBox = sender as CheckBox;
-            if (checkBox == null)
+            if (!(sender is CheckBox checkBox))
             {
                 return;
             }
