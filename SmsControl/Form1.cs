@@ -546,6 +546,9 @@ namespace SmsControl
                 case "chbxNumber4":
                     // TODO: Handle checkbox for txbxNumber4.
                     break;
+                default:
+                    logDebug("Unknown number checkbox changed: " + checkBox.Name);
+                    break;
             }
         }
     }
